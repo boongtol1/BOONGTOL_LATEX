@@ -1,25 +1,32 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage{kotex}
+\usepackage{amssymb}  
 
 \begin{document}
 
-\title{An Example LaTeX Document}
-\author{Your Name}
-\date{\today}
-\maketitle
+% 다항식 나눗셈 과정
+\[
+\begin{array}{r}
+    x + 1\phantom{abcdef} \\
+    x + 2{\overline{\smash{\big)}\,x^2 + 3x + 5\phantom{}}} \\
+    \underline{\phantom{}x^2 + 2x\phantom{abc)}} \\
+    \phantom{x^2 + }x + 5\phantom{} \\
+    \underline{\phantom{}x + 2} \\
+    \phantom{x^2 + 3}3\phantom{}
+\end{array}
+\]
 
-\section{Introduction}
-This is an example of a LaTeX document. You can write text, and include mathematical equations, such as the famous Pythagorean theorem:
-
-\begin{equation}
-a^2 + b^2 = c^2
-\end{equation}
-
-\section{Another Section}
-LaTeX allows you to format documents with sections, subsections, and much more. Here's an example of a summation:
-
-\begin{equation}
-\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
-\end{equation}
+% 수식 정리 과정
+$$
+\begin{aligned}
+& x^2+3x = x(x+2) + x \\
+& x+5 = 1 \cdot (x+2) + 3 \\
+& \therefore x = 1 \cdot (x+2) + 3 - 5 \\
+& \therefore x^2 + 3x = x(x+2) + 1 \cdot (x+2) + 3 - 5 \\
+& = (x+2)\{x+1\} + 3 - 5 \\
+& \therefore x^2 + 3x + 5 = (x+2)(x+1) + 3
+\end{aligned}
+$$
 
 \end{document}
